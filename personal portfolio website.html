@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deva — Full-Stack Developer & AI Engineer crafting thoughtful digital experiences. Explore projects, skills, and get in touch." />
+  <meta name="keywords" content="Deva, full-stack developer, AI engineer, portfolio, web development, machine learning" />
+  <meta name="author" content="Deva" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d0d0d" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deva — Developer & AI Engineer" />
+  <meta property="og:description" content="Full-Stack Developer & AI Engineer crafting thoughtful digital experiences." />
+  <meta property="og:url" content="https://deva.dev" />
+  <meta property="og:image" content="https://deva.dev/og-preview.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Deva — Developer & AI Engineer" />
+  <meta name="twitter:description" content="Full-Stack Developer & AI Engineer crafting thoughtful digital experiences." />
+
+  <link rel="canonical" href="https://deva.dev" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Deva",
+    "jobTitle": "Full-Stack Developer & AI Engineer",
+    "url": "https://deva.dev",
+    "sameAs": [
+      "https://github.com/deva",
+      "https://linkedin.com/in/deva"
+    ]
+  }
+  </script>
+
+  <title>Deva — Developer & AI Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #0d0d0d;
+      --ink-2: #3a3a3a;
+      --ink-3: #6b6b6b;
+      --paper: #f4f1eb;
+      --paper-2: #ede9e0;
+      --paper-3: #e4dfd3;
+      --accent: #c84b2f;
+      --accent-2: #e8a87c;
+      --line: rgba(13,13,13,0.12);
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'Lora', serif;
+      --font-mono: 'DM Mono', monospace;
+      --radius: 4px;
+      --nav-h: 64px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 9999;
+      padding: 0.75rem 1.25rem;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    :focus-visible {
+      outline: 2.5px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: var(--radius);
+    }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .site-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav-link {
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-3);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: var(--radius);
+      transition: color 0.15s, background 0.15s;
+      position: relative;
+    }
+    .nav-link:hover { color: var(--ink); background: var(--paper-2); }
+    .nav-link[aria-current="page"] {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .nav-link[aria-current="page"]::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0.75rem; right: 0.75rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 1px 1px 0 0;
+    }
+    .page { display: none; }
+    .page.active { display: block; }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      min-height: calc(100vh - var(--nav-h) - 12rem);
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px; height: 1px;
+      background: var(--accent);
+    }
+
+    .hero-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.75rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .hero-heading em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      font-size: 1.0625rem;
+      color: var(--ink-2);
+      line-height: 1.75;
+      max-width: 44ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all 0.15s;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+    .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+    .btn-secondary:hover { background: var(--paper-2); }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avatar-frame {
+      width: clamp(240px, 28vw, 340px);
+      aspect-ratio: 1;
+      border-radius: 2px;
+      background: var(--paper-3);
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .avatar-initials {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 8vw, 6rem);
+      font-weight: 800;
+      color: var(--ink-3);
+      letter-spacing: -0.05em;
+    }
+    .avatar-frame::after {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1px solid var(--line);
+      pointer-events: none;
+    }
+
+    /* Stats row */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: clamp(4rem, 8vw, 7rem);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .stat-item {
+      padding: 1.75rem 2rem;
+      border-right: 1px solid var(--line);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--ink-3);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .about-sidebar {}
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--paper-3);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .about-photo-text {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--ink-3);
+    }
+    .about-quick-info {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .about-quick-info li {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--ink-2);
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .info-label {
+      color: var(--ink-3);
+      min-width: 4rem;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .section-label::before {
+      content: '//';
+      opacity: 0.5;
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-body p {
+      color: var(--ink-2);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .skill-group {}
+    .skill-group-title {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.75rem;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .skill-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 300;
+      padding: 0.3rem 0.65rem;
+      background: var(--paper-3);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      color: var(--ink-2);
+    }
+    .projects-intro {
+      max-width: 56ch;
+      margin-bottom: 3.5rem;
+    }
+    .projects-intro p {
+      color: var(--ink-2);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: border-color 0.15s, background 0.15s, transform 0.15s;
+      position: relative;
+    }
+    .project-card:hover {
+      border-color: var(--ink-3);
+      background: var(--paper-2);
+      transform: translateY(-2px);
+    }
+    .project-card:focus-visible {
+      outline-offset: 0;
+    }
+
+    .project-number {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--ink-3);
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--ink-2);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 1.25rem;
+    }
+    .project-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 300;
+      padding: 0.2rem 0.5rem;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      color: var(--ink-3);
+    }
+
+    .project-arrow {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .project-arrow svg {
+      transition: transform 0.15s;
+    }
+    .project-card:hover .project-arrow svg {
+      transform: translate(3px, -3px);
+    }
+
+    .project-featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .project-featured .project-title { font-size: 1.5rem; }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .contact-intro p {
+      color: var(--ink-2);
+      font-size: 1.0rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .contact-links {
+      margin-top: 2.5rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-links li a {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--ink-2);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: color 0.15s;
+    }
+    .contact-links li a:hover { color: var(--accent); }
+    .contact-links li a .link-icon {
+      width: 36px; height: 36px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      transition: border-color 0.15s;
+    }
+    .contact-links li a:hover .link-icon { border-color: var(--accent); }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink-2);
+      text-transform: uppercase;
+    }
+
+    .form-group .required-mark {
+      color: var(--accent);
+      margin-left: 0.2rem;
+      aria-hidden: true;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--ink);
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+      width: 100%;
+      transition: border-color 0.15s;
+      appearance: none;
+    }
+    .form-group input:hover,
+    .form-group textarea:hover,
+    .form-group select:hover { border-color: var(--ink-3); }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: 2.5px solid var(--accent);
+      outline-offset: 0;
+      border-color: transparent;
+    }
+    .form-group textarea { min-height: 140px; resize: vertical; }
+
+    .form-hint {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--ink-3);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group input[aria-invalid="true"],
+    .form-group textarea[aria-invalid="true"] {
+      border-color: #c0392b;
+    }
+
+    .field-error {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #c0392b;
+      display: none;
+    }
+    .field-error.visible { display: block; }
+
+    #form-status {
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 300;
+      display: none;
+    }
+    #form-status.success {
+      display: block;
+      background: #edfbf1;
+      border: 1px solid #6fcf97;
+      color: #1a7a3c;
+    }
+    #form-status.error {
+      display: block;
+      background: #fff0ef;
+      border: 1px solid #e07070;
+      color: #b91c1c;
+    }
+
+    .btn-submit {
+      align-self: flex-start;
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.85rem 2rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: 1.5px solid var(--ink);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-submit:hover { background: var(--accent); border-color: var(--accent); }
+    .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .site-footer {
+      margin-top: 8rem;
+      border-top: 1px solid var(--line);
+      padding: 2rem clamp(1.5rem, 5vw, 4rem);
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--ink-3);
+    }
+    .footer-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .footer-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--ink-3);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-nav a:hover { color: var(--ink); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 3.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-visual { order: -1; }
+      .avatar-frame { width: clamp(140px, 50vw, 200px); }
+      .stats-row { grid-template-columns: 1fr; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--line); }
+      .stat-item:last-child { border-bottom: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-photo { aspect-ratio: 1; max-width: 200px; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-featured { grid-column: auto; grid-template-columns: 1fr; }
+      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .site-nav { gap: 0; }
+      .nav-link { padding: 0.4rem 0.5rem; font-size: 0.8rem; }
+    }
+
+    @media print {
+      .site-header, .site-footer, .hero-cta { display: none; }
+      .page { display: block !important; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="nav-inner">
+      <a href="#" class="site-logo" aria-label="Deva — Home" onclick="navigateTo('home'); return false;">
+        Deva<span class="logo-dot" aria-hidden="true"></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home" class="nav-link" id="nav-home" aria-current="page" onclick="navigateTo('home'); return false;">Home</a>
+        <a href="#about" class="nav-link" id="nav-about" onclick="navigateTo('about'); return false;">About</a>
+        <a href="#projects" class="nav-link" id="nav-projects" onclick="navigateTo('projects'); return false;">Projects</a>
+        <a href="#contact" class="nav-link" id="nav-contact" onclick="navigateTo('contact'); return false;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <section id="page-home" class="page active" role="region" aria-labelledby="home-heading">
+      <div style="max-width:1100px; margin:0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,4rem);">
+
+        <div class="hero">
+          <div class="hero-content">
+            <p class="hero-eyebrow" aria-hidden="true">Available for work</p>
+            <h1 class="hero-heading" id="home-heading">
+              Building things<br/>that <em>think</em> &<br/>connect.
+            </h1>
+            <p class="hero-desc">
+              I'm Deva — a full-stack developer and AI engineer based in Tamil Nadu. I design and build intelligent systems, thoughtful interfaces, and everything in between.
+            </p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary" onclick="navigateTo('projects'); return false;">
+                View Projects
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary" onclick="navigateTo('contact'); return false;">Get in touch</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <figure class="avatar-frame" role="img" aria-label="Portrait placeholder — Deva">
+              <span class="avatar-initials" aria-hidden="true">D</span>
+            </figure>
+          </div>
+        </div>
+
+        <hr class="divider" />
+        <section aria-label="Career highlights">
+          <div class="stats-row">
+            <div class="stat-item">
+              <p class="stat-number" aria-label="3 years experience">3+</p>
+              <p class="stat-label">Years of experience</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-number" aria-label="20 projects completed">20+</p>
+              <p class="stat-label">Projects completed</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-number" aria-label="8 technologies mastered">8</p>
+              <p class="stat-label">Core technologies</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+    <section id="page-about" class="page" role="region" aria-labelledby="about-heading">
+      <div style="max-width:1100px; margin:0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,4rem);">
+
+        <div class="about-grid">
+          
+          <aside aria-label="Profile summary">
+            <figure class="about-photo" role="img" aria-label="Photo of Deva">
+              <span class="about-photo-text" aria-hidden="true">D</span>
+            </figure>
+
+            <ul class="about-quick-info" aria-label="Quick information">
+              <li>
+                <span class="info-label sr-only">Location</span>
+                <span class="info-label" aria-hidden="true">loc</span>
+                <span>Tamil Nadu, India</span>
+              </li>
+              <li>
+                <span class="info-label sr-only">Education</span>
+                <span class="info-label" aria-hidden="true">edu</span>
+                <span>B.Tech Computer Science</span>
+              </li>
+              <li>
+                <span class="info-label sr-only">Focus</span>
+                <span class="info-label" aria-hidden="true">focus</span>
+                <span>AI / ML &amp; Web Dev</span>
+              </li>
+              <li>
+                <span class="info-label sr-only">Status</span>
+                <span class="info-label" aria-hidden="true">status</span>
+                <span>Open to opportunities</span>
+              </li>
+            </ul>
+          </aside>
+
+          
+          <div class="about-body">
+            <p class="section-label">About me</p>
+            <h2 class="section-heading" id="about-heading">Developer. Student.<br/>Curious builder.</h2>
+
+            <p>I'm a computer science student with a deep interest in the intersection of software engineering and artificial intelligence. I love the moment when a complex system clicks into place — when the algorithm runs, the interface feels intuitive, and everything just works.</p>
+
+            <p>My academic journey has taken me through graph algorithms, NLP pipelines, machine learning paradigms, and full-stack development. Outside coursework, I build projects that challenge me to connect theory with practice.</p>
+
+            <p>When I'm not coding, I'm reading about the systems — technical, social, and economic — that shape how technology evolves. I believe good engineers are also good thinkers.</p>
+
+            <hr class="divider" />
+
+            <section aria-labelledby="skills-heading">
+              <h3 id="skills-heading" class="section-label">Skills &amp; technologies</h3>
+              <div class="skills-grid">
+                <div class="skill-group">
+                  <p class="skill-group-title">Languages</p>
+                  <ul class="skill-tags" aria-label="Programming languages">
+                    <li class="skill-tag">Python</li>
+                    <li class="skill-tag">Java</li>
+                    <li class="skill-tag">JavaScript</li>
+                    <li class="skill-tag">SQL</li>
+                    <li class="skill-tag">HTML5/CSS3</li>
+                  </ul>
+                </div>
+                <div class="skill-group">
+                  <p class="skill-group-title">AI / ML</p>
+                  <ul class="skill-tags" aria-label="Artificial intelligence and machine learning tools">
+                    <li class="skill-tag">scikit-learn</li>
+                    <li class="skill-tag">PyTorch</li>
+                    <li class="skill-tag">NLTK</li>
+                    <li class="skill-tag">Transformers</li>
+                    <li class="skill-tag">NumPy</li>
+                  </ul>
+                </div>
+                <div class="skill-group">
+                  <p class="skill-group-title">Web & Frameworks</p>
+                  <ul class="skill-tags" aria-label="Web frameworks and tools">
+                    <li class="skill-tag">React</li>
+                    <li class="skill-tag">Node.js</li>
+                    <li class="skill-tag">Flask</li>
+                    <li class="skill-tag">FastAPI</li>
+                    <li class="skill-tag">REST APIs</li>
+                  </ul>
+                </div>
+                <div class="skill-group">
+                  <p class="skill-group-title">Tools & Systems</p>
+                  <ul class="skill-tags" aria-label="Development tools and systems">
+                    <li class="skill-tag">Git/GitHub</li>
+                    <li class="skill-tag">Linux</li>
+                    <li class="skill-tag">Docker</li>
+                    <li class="skill-tag">PostgreSQL</li>
+                    <li class="skill-tag">Graph Theory</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="page-projects" class="page" role="region" aria-labelledby="projects-heading">
+      <div style="max-width:1100px; margin:0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,4rem);">
+
+        <p class="section-label">Selected work</p>
+        <h2 class="section-heading" id="projects-heading">Projects &amp; experiments</h2>
+
+        <div class="projects-intro">
+          <p>A selection of projects spanning AI, data structures, and web development. Each one taught me something new about building systems that are both technically rigorous and practically useful.</p>
+        </div>
+
+        <div class="projects-grid" role="list" aria-label="Project list">
+          <article class="project-card project-featured" role="listitem" aria-labelledby="proj-1-title">
+            <div>
+              <p class="project-number" aria-label="Project 01">01 — Featured</p>
+              <h3 class="project-title" id="proj-1-title">NLP Text Preprocessor Pipeline</h3>
+              <p class="project-desc">An end-to-end NLP preprocessing toolkit implementing tokenization, stemming, lemmatization, stop-word removal, and POS tagging with configurable pipeline stages. Designed for academic and production NLP workflows.</p>
+              <ul class="project-stack" aria-label="Technologies used">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">NLTK</li>
+                <li class="project-tag">spaCy</li>
+                <li class="project-tag">Pipeline Architecture</li>
+              </ul>
+              <p class="project-arrow" aria-label="View project on GitHub">
+                View on GitHub
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </p>
+            </div>
+            <div>
+              <p class="project-number" aria-hidden="true">&nbsp;</p>
+              <div style="background:var(--paper-3); border:1px solid var(--line); border-radius:var(--radius); padding:1.5rem; font-family:var(--font-mono); font-size:0.72rem; font-weight:300; color:var(--ink-3); line-height:1.9;" aria-label="Code preview">
+                <span style="color:var(--ink-3)">$ python pipeline.py</span><br/>
+                <span style="color:var(--ink-2)">→ Tokenizing input...</span><br/>
+                <span style="color:var(--ink-2)">→ Removing stopwords (153 filtered)</span><br/>
+                <span style="color:var(--ink-2)">→ Lemmatizing tokens...</span><br/>
+                <span style="color:var(--ink-2)">→ POS tagging (94.2% accuracy)</span><br/>
+                <span style="color:var(--accent)">✓ Pipeline complete. 2847 tokens processed.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" role="listitem" aria-labelledby="proj-2-title">
+            <p class="project-number" aria-label="Project 02">02</p>
+            <h3 class="project-title" id="proj-2-title">Graph Algorithms Visualizer</h3>
+            <p class="project-desc">An interactive tool for visualizing topological sort, BFS/DFS traversal, and shortest-path algorithms on adjacency list and matrix representations.</p>
+            <ul class="project-stack" aria-label="Technologies used">
+              <li class="project-tag">Python</li>
+              <li class="project-tag">NetworkX</li>
+              <li class="project-tag">Matplotlib</li>
+              <li class="project-tag">Graph Theory</li>
+            </ul>
+            <p class="project-arrow" aria-label="View project on GitHub">
+              View on GitHub
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </p>
+          </article>
+
+          <article class="project-card" role="listitem" aria-labelledby="proj-3-title">
+            <p class="project-number" aria-label="Project 03">03</p>
+            <h3 class="project-title" id="proj-3-title">Word Frequency Analyser (Java)</h3>
+            <p class="project-desc">A Java program performing word frequency analysis on large text corpora using HashMap, TreeMap, and custom sorting comparators with clean output formatting.</p>
+            <ul class="project-stack" aria-label="Technologies used">
+              <li class="project-tag">Java</li>
+              <li class="project-tag">Collections API</li>
+              <li class="project-tag">File I/O</li>
+              <li class="project-tag">Algorithms</li>
+            </ul>
+            <p class="project-arrow" aria-label="View project on GitHub">
+              View on GitHub
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </p>
+          </article>
+
+          <article class="project-card" role="listitem" aria-labelledby="proj-4-title">
+            <p class="project-number" aria-label="Project 04">04</p>
+            <h3 class="project-title" id="proj-4-title">ML Paradigm Classifier</h3>
+            <p class="project-desc">A study tool that classifies machine learning problems by paradigm — supervised, unsupervised, semi-supervised, or reinforcement learning — using heuristic rule sets.</p>
+            <ul class="project-stack" aria-label="Technologies used">
+              <li class="project-tag">Python</li>
+              <li class="project-tag">scikit-learn</li>
+              <li class="project-tag">Decision Rules</li>
+              <li class="project-tag">ML Theory</li>
+            </ul>
+            <p class="project-arrow" aria-label="View project on GitHub">
+              View on GitHub
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <section id="page-contact" class="page" role="region" aria-labelledby="contact-heading">
+      <div style="max-width:1100px; margin:0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,4rem);">
+
+        <p class="section-label">Let's talk</p>
+        <h2 class="section-heading" id="contact-heading">Get in touch</h2>
+
+        <div class="contact-layout">
+          <!-- Contact info -->
+          <aside aria-label="Contact information and social links">
+            <div class="contact-intro">
+              <p>Whether you're looking to collaborate, have a question about my work, or just want to say hello — my inbox is always open.</p>
+              <p>I typically respond within 24 hours.</p>
+            </div>
+
+            <nav aria-label="Social media links">
+              <ul class="contact-links">
+                <li>
+                  <a href="mailto:deva@example.com" aria-label="Send email to deva@example.com">
+                    <span class="link-icon" aria-hidden="true">✉</span>
+                    deva@example.com
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/deva" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">
+                    <span class="link-icon" aria-hidden="true">gh</span>
+                    github.com/deva
+                  </a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com/in/deva" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">
+                    <span class="link-icon" aria-hidden="true">in</span>
+                    linkedin.com/in/deva
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          <div>
+            <form
+              id="contact-form"
+              class="contact-form"
+              novalidate
+              aria-label="Contact form"
+              aria-describedby="form-status"
+            >
+              <div
+                id="form-status"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+              ></div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="field-name">
+                    Name<span class="required-mark" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="field-name"
+                    name="name"
+                    autocomplete="given-name"
+                    required
+                    aria-required="true"
+                    aria-describedby="name-error"
+                    placeholder="Your name"
+                  />
+                  <span id="name-error" class="field-error" role="alert">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="field-email">
+                    Email<span class="required-mark" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="field-email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="email-error"
+                    placeholder="you@example.com"
+                  />
+                  <span id="email-error" class="field-error" role="alert">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="field-subject">Subject</label>
+                <select id="field-subject" name="subject" autocomplete="off">
+                  <option value="">Select a topic…</option>
+                  <option value="collaboration">Project Collaboration</option>
+                  <option value="internship">Internship / Job Opportunity</option>
+                  <option value="academic">Academic Discussion</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="field-message">
+                  Message<span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="field-message"
+                  name="message"
+                  required
+                  aria-required="true"
+                  aria-describedby="message-hint message-error"
+                  placeholder="Tell me what's on your mind…"
+                ></textarea>
+                <span id="message-hint" class="form-hint">Minimum 20 characters.</span>
+                <span id="message-error" class="field-error" role="alert">Please write a message (at least 20 characters).</span>
+              </div>
+
+              <div class="form-group" style="flex-direction:row; align-items:center; gap:0.75rem;">
+                <input
+                  type="checkbox"
+                  id="field-consent"
+                  name="consent"
+                  required
+                  aria-required="true"
+                  aria-describedby="consent-error"
+                  style="width:18px; height:18px; cursor:pointer; accent-color:var(--accent);"
+                />
+                <label for="field-consent" style="font-family:var(--font-mono); font-size:0.78rem; font-weight:300; color:var(--ink-2); text-transform:none; letter-spacing:0; cursor:pointer;">
+                  I agree that my data may be used to respond to this inquiry.
+                </label>
+                <span id="consent-error" class="field-error" role="alert">Please confirm your consent.</span>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submit-btn">
+                Send message
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <span aria-label="Copyright">&copy;</span> 2026 Deva. Built with semantic HTML5 &amp; care.
+      </p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="#home" onclick="navigateTo('home'); return false;">Home</a></li>
+          <li><a href="#about" onclick="navigateTo('about'); return false;">About</a></li>
+          <li><a href="#projects" onclick="navigateTo('projects'); return false;">Projects</a></li>
+          <li><a href="#contact" onclick="navigateTo('contact'); return false;">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    function navigateTo(page) {
+    
+      document.querySelectorAll('.page').forEach(p => {
+        p.classList.remove('active');
+        p.hidden = false; 
+      });
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.removeAttribute('aria-current');
+      });
+
+      const targetPage = document.getElementById('page-' + page);
+      if (targetPage) {
+        targetPage.classList.add('active');
+        const main = document.getElementById('main-content');
+        main.focus({ preventScroll: true });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      const activeNav = document.getElementById('nav-' + page);
+      if (activeNav) activeNav.setAttribute('aria-current', 'page');
+      history.pushState(null, '', '#' + page);
+    }
+    (function() {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      const pages = ['home','about','projects','contact'];
+      navigateTo(pages.includes(hash) ? hash : 'home');
+    })();
+
+    window.addEventListener('popstate', function() {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      navigateTo(hash);
+    });
+    const form = document.getElementById('contact-form');
+
+    function showError(fieldId, errorId, show) {
+      const field = document.getElementById(fieldId);
+      const error = document.getElementById(errorId);
+      if (show) {
+        field.setAttribute('aria-invalid', 'true');
+        error.classList.add('visible');
+      } else {
+        field.setAttribute('aria-invalid', 'false');
+        error.classList.remove('visible');
+      }
+    }
+
+    function validateForm() {
+      let valid = true;
+
+      const name = document.getElementById('field-name').value.trim();
+      if (!name) { showError('field-name','name-error',true); valid = false; }
+      else showError('field-name','name-error',false);
+
+      const email = document.getElementById('field-email').value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) { showError('field-email','email-error',true); valid = false; }
+      else showError('field-email','email-error',false);
+
+      const message = document.getElementById('field-message').value.trim();
+      if (message.length < 20) { showError('field-message','message-error',true); valid = false; }
+      else showError('field-message','message-error',false);
+
+      const consent = document.getElementById('field-consent').checked;
+      const consentError = document.getElementById('consent-error');
+      if (!consent) {
+        consentError.classList.add('visible');
+        valid = false;
+      } else {
+        consentError.classList.remove('visible');
+      }
+
+      return valid;
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+
+      if (!validateForm()) {
+        status.className = 'error';
+        status.style.display = 'block';
+        status.textContent = 'Please fix the errors above before sending.';
+        // Focus first invalid field
+        const firstInvalid = form.querySelector('[aria-invalid="true"]');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      setTimeout(function() {
+        status.className = 'success';
+        status.style.display = 'block';
+        status.textContent = '✓ Message sent! I\'ll get back to you within 24 hours.';
+        form.reset();
+        btn.disabled = false;
+        btn.innerHTML = 'Send message <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        status.focus();
+      }, 1200);
+    });
+
+    ['field-name','field-email','field-message'].forEach(function(id) {
+      const field = document.getElementById(id);
+      field.addEventListener('blur', function() {
+        if (id === 'field-name') showError('field-name','name-error', !field.value.trim());
+        if (id === 'field-email') showError('field-email','email-error', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim()));
+        if (id === 'field-message') showError('field-message','message-error', field.value.trim().length < 20);
+      });
+    });
+  </script>
+</body>
+</html>
